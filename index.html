@@ -1,25 +1,16 @@
-<html ng-app>
+<html ng-app="bitblogger">
     <head>
     
         <script src="bower_components/angular/angular.js"></script>
     </head>
     
-    <input type="text" ng-model="names">
-    <h1>{{names}}</h1>
-    <input type="checkbox" ng-model="check">
-    <h1>{{check}}</h1>
-    <h3>{{5+5}}</h3>
-    <h3>{{5+"5"}}</h3>
-    <h3>{{5-"5"}}</h3>
+    <body>
     
-    <input type="radio" name="gender" ng-model="rad" value="Male">
-    <input type="radio" name="gender" ng-model="rad" value="Female">
-    <h1>{{rad}}</h1>
     
-    <input type="text" ng-model="first">
-    <input type="text" ng-model="second">
-    
-    <button ng-click="result = first + second">+</button>
-    <h1>{{result}}</h1>
+        <script src="app/header/header.js"></script>
+        <script src="app/login/login.js"></script>
+        <script src="app/register/register.js"></script>
+        <script src="app/app.js"></script>
+    </body>
     
 </html> 
