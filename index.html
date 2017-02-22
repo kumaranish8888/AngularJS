@@ -16,6 +16,10 @@
     <input type="radio" name="gender" ng-model="rad" value="Female">
     <h1>{{rad}}</h1>
     
-    <button ng-click="btn">click here</button>
-    <h1>{{btn}}</h1>
+    <input type="text" ng-model="first">
+    <input type="text" ng-model="second">
+    
+    <button ng-click="result = first + second">+</button>
+    <h1>{{result}}</h1>
+    
 </html> 
