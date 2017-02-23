@@ -7,4 +7,10 @@
         console.log("config: bitblogger");
     }]);
     
+    angular.module("bitblogger").controller("mainCtrl", [mainCtrlfn]);
+    
+    function mainCtrlfn(){
+        var mn = this;
+    }
+    
 })();
