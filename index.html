@@ -1,15 +1,24 @@
 <html ng-app = "bitblogger">
 <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css">
     <script src="bower_components/angular/angular.js"></script>
     </head>
     
     <body>
-    <h1>New Project started</h1>
+    <div ng-controller = "mainCtrl as mc">
         
+        <div ng-include = "mc.headerTemplate"></div>
         
+        <div ng-include = "mc.commentTemplate"></div>
+        
+        </div>
+        
+        <script src="app/app.js"></script>
         <script src="app/header/header.js"></script>
+        <script src="app/header/headerCtrl.js"></script>
+        <script src="app/comment/comment.js"></script>
+        <script src="app/comment/commentCtrl.js"></script>
         <script src="app/login/login.js"></script>
         <script src="app/register/register.js"></script>
-    <script src="app/app.js"></script>
     </body>
 </html>

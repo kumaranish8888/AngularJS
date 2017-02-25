@@ -1,12 +1,19 @@
 (function(){
     
     
-    angular.module("bitblogger", ["login", "header", "register"]);
+    angular.module("bitblogger", ["login", "header", "register", "comment"]);
     
-    angular.module("bitblogger").config([function(){
+   angular.module("bitblogger").config([function(){
+       console.log("Working");
+   }]);
+    
+    angular.module("bitblogger").controller("mainCtrl", [mainCtrl]);
+    
+    function mainCtrl(){
+        var vm =  this;
         
-        console.log("config: Bitblogger");
-        
-    }]);
+        vm.headerTemplate = "app/header/header.tpl.html";
+        vm.commentTemplate = "app/comment/comment.tpl.html";
+    }
     
 })();
