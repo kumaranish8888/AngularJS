@@ -1,0 +1,10 @@
+<form class="form-horizontal" ng-controller = "registerCtrl as rc"> 
+<div class="container"  >
+    <div class="col-sm-4">
+  <label >Countries</label>
+  <select class="form-control" ng-model = "rc.selectedCountry" ng-options = "country.name for country in rc.countries">
+    
+  </select>
+    </div>
+</div>
+</form>

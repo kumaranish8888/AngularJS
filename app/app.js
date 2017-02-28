@@ -14,6 +14,7 @@
         
         vm.headerTemplate = "app/header/header.tpl.html";
         vm.commentTemplate = "app/comment/comment.tpl.html";
+        vm.registerTemplate = "app/register/register.tpl.html";
     }
     
 })();
