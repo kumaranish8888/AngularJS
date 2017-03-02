@@ -1,11 +1,23 @@
 (function(){
     
-    angular.module("course").service("courseSvc", ["$http", courseSvc]);
+    angular.module("course").service("courseSvc", [courseSvc]);
     
-    function courseSvc($http){
-        this.getMyCourses = function(){
-            return $http.get("api/mycourses.json");
+    function courseSvc(){
+        
+        this.getCountries = function(){
+            return [
+                {"name": "India", "code": "IN"},
+                {"name": "United States", "code": "USA"}
+            ];
         };
+        
+   /*     this.getMyCourses = function(){
+            
+            return $http.get("api/mycourses.json");
+        
+        }; */
+        
+ 
     
         
         this.getCourses = function(){
@@ -40,6 +52,8 @@
         }
     ];
         }
-    }
+        
+    };
+    
     
 })();
