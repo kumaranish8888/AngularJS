@@ -1,8 +1,8 @@
 (function(){
     
-    angular.module("course").service("courseSvc", [courseSvc]);
+    angular.module("course").service("courseSvc", ["$http", courseSvc]);
     
-    function courseSvc(){
+    function courseSvc($http){
         
         this.getCountries = function(){
             return [
@@ -11,11 +11,11 @@
             ];
         };
         
-   /*     this.getMyCourses = function(){
+       this.getMyCourses = function(){
             
             return $http.get("api/mycourses.json");
         
-        }; */
+        }; 
         
  
     
