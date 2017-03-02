@@ -1,0 +1,44 @@
+body {
+    background-image: url("imageone.jpeg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.myclass {
+    
+    height: 150px;
+	margin: 30px;
+	padding-bottom: 20px;
+	width: 150px;
+	
+}
+
+.second {
+    background-image: url("haddop.jpeg");
+    background-size: cover;
+}
+
+.third {
+    background-image: url("html.jpeg");
+    background-size: cover;
+}
+
+.fourth{
+    background-image: url("angular.jpeg");
+    background-size: cover;
+}
+
+.fifth {
+    background-image: url("java.jpeg");
+    background-size: cover;
+}
+
+.sixth {
+    background-image: url("oracle.jpeg");
+    background-size: cover;
+}
+
+.seventh{
+    background-image: url("android.jpeg");
+    background-size: cover;
+}

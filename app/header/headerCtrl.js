@@ -1,31 +1,30 @@
-
 (function(){
     
-    angular.module("header").controller("headerCtrl", headerCtrl);
-
+    
+    
     function headerCtrl(){
-        console.log("header controller running properly");
-    
-    
-    var nm = this;
-        nm.navItems = [
+         var vm = this;
+        
+        vm.navItems = [
             {
-                "name": "Products",
+                "key": "home",
+                "value": "Home"
+            },
+            {
+                "key": "products",
                 "value": "Products"
             },
             {
-                "name": "Login",
+                "key": "login",
                 "value": "Login"
             },
             {
-                "name": "Register",
+                "key": "register",
                 "value": "Register"
             }
-            
         ];
+    }
     
-    };
+    angular.module("header").controller("headerCtrl", [headerCtrl]);
     
-    
-    
-})();
+})()
