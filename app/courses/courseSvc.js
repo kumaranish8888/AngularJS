@@ -1,12 +1,12 @@
 (function(){
     
-    angular.module("course").service("courseSvc", [courseSvc]);
+    angular.module("course").service("courseSvc", ["$http", courseSvc]);
     
-    function courseSvc(){
-     /*   this.getCourses = function(){
+    function courseSvc($http){
+        this.getMyCourses = function(){
             return $http.get("api/mycourses.json");
         };
-    }; */
+    
         
         this.getCourses = function(){
             return [
