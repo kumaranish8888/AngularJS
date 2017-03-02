@@ -7,15 +7,16 @@
     <body>
     <div ng-controller = "mainCtrl as mc" class="container">
         <div ng-include = "mc.headerTemplate"></div>
-        
-        <div ng-include = "mc.tableTemplate"></div>
+        <div ng-include = "mc.courseTemplate"></div>
         </div>
     
-        <script src="app/app.js"></script>
+     
         
         <script src="app/header/header.js"></script>
         <script src="app/header/headerCtrl.js"></script>
-        <script src="app/table/table.js"></script>
-        <script src="app/table/tableCtrl.js"></script>
+        <script src="app/courses/course.js"></script>
+        <script src="app/courses/courseCtrl.js"></script>
+        <script src="app/courses/courseSvc.js"></script>
+        <script src="app/app.js"></script>
     </body>
 </html>

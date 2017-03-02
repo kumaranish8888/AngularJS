@@ -1,0 +1,10 @@
+<form class="form-horizontal" ng-controller="courseCtrl as rc">
+  <div class="form-group">
+    <label class="control-label col-sm-2">Courses:</label>
+    <div class="col-sm-4">
+      <select class="form-control" 
+      ng-model="rc.selectedCourse"
+      ng-options="course.name for course in rc.myCourses"></select>
+    </div>
+  </div>
+</form>
