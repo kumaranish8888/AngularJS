@@ -1,0 +1,9 @@
+<div class = "container"  ng-controller = "postsCtrl as pc">
+<div class="col-xs-8" >
+    <div class="panel panel-default" ng-repeat="post in pc.allPosts">
+        <div class="panel-body">
+            <label>{{post.postText}}</label>
+</div>
+    </div>
+</div>
+</div>

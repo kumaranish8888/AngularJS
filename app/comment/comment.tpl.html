@@ -1,9 +1,10 @@
 <div ng-controller = "commentCtrl as cm">
-    <div class ="container" class="panel-body"><h2>Comments:</h2></div><hr/>
+    <div class ="container" class="panel-body"><h2>Comments:</h2><hr/></div>
     
     <div class="container" ng-repeat = "item in cm.comments"> 
         <label class="panel-body">  {{item.commenter}} : {{item.commentText}} </label> <hr/>
     
     </div>
+
     
 </div>

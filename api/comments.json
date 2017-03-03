@@ -1,14 +1,5 @@
-(function(){
-    
-    angular.module("comment").service("commentSvc", [commentSvc]);
-    
-    function commentSvc(){
-        
-       this.getComments = function(){
-            
-         //  return $http.get("api/comments.json");
-           
-            return [
+{
+    "myComments": [
                 {
                     "postId":"1",
                 "commenter":"Bikash",
@@ -24,8 +15,5 @@
                 "commenter":"Jake",
                 "commentText": "Just Amazing !"
             }
-            ]; 
-        };
-    }; 
-    
-})();
+            ];
+}
