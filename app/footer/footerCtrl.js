@@ -6,7 +6,9 @@
         
         console.log(footerSvc.name);
         
-        footerSvc.getExtras()
+        fm.extra = footerSvc.getExtras();
+        
+     /*   footerSvc.getExtras()
             .then(function(response){
             console.log(response);
             fm.extra = response.data.extras;
@@ -18,7 +20,7 @@
         
         .finally(function(response){
             
-        });
+        }); */
         
     };
     

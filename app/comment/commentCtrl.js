@@ -5,9 +5,9 @@
     function commentCtrl(commentSvc){
         console.log(commentSvc);
         var gm = this;
-      //  gm.getComments = commentSvc.comments(); 
+       gm.getComments = commentSvc.comments(); 
         
-        commentSvc.yourcomments()
+    /*    commentSvc.yourcomments()
         .then(function(response){
             console.log(response);
             vm.getComments = response.data.mycomments;
@@ -17,7 +17,7 @@
         })
         .finally(function(){
             
-        });
+        }); */
         
     }
     

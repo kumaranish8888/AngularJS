@@ -1,8 +1,8 @@
 (function(){
     
-    angular.module("comment").service("commentSvc", ["$http", commentSvc]);
+    angular.module("comment").service("commentSvc", [commentSvc]);
     
-    function commentSvc($http){
+    function commentSvc(){
         this.comments = function(){
             return [
               {"commentID": "101", "commentText": "This is the best Websit ever"},
@@ -12,9 +12,9 @@
             
         }
         
-        this.yourcomments = function(){
+     /*   this.yourcomments = function(){
             return $http.get("api/allcomments.json");
-        };
+        }; */
     };
     
 })();
