@@ -4,6 +4,12 @@
         <div class="panel-body">
             <label>{{post.postText}}</label>
 </div>
+        <div class ="container" class="panel-body"><h2>Comments:</h2><hr/></div>
+    
+    <div class="container" ng-repeat = "item in post.comments"> 
+        <label class="panel-body">  {{item.postId}} : {{item.commentText}} </label> <hr/>
+    
+    </div>
     </div>
 </div>
 </div>
