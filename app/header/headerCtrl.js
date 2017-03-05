@@ -8,8 +8,8 @@
     var nm = this;
         nm.navItem = [
             {
-                "name": "Products",
-                "value": "products"
+                "name": "Posts",
+                "value": "posts"
             },
             {
                 "name": "Login",
