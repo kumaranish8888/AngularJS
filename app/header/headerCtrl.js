@@ -7,21 +7,17 @@
         
         vm.navItems = [
             {
-                "key": "home",
-                "value": "Home"
+                "key":"home",
+                "value":"Home"
             },
             {
-                "key": "products",
-                "value": "Products"
-            },
-            {
-                "key": "login",
+                "key": "comment",
                 "value": "Login"
             },
             {
-                "key": "register",
+                "key": "footer",
                 "value": "Register"
-            }
+            },
         ];
     }
     

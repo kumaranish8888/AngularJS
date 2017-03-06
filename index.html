@@ -3,22 +3,16 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
         <link rel="stylesheet" href="style.css">
         <script src="bower_components/angular/angular.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
     </head>
     
     <body>
         <marquee>This Website contains information about all the Latest Technologies</marquee>
     <div ng-controller = "mainCtrl as mc" class="container">
         <div ng-include = "mc.headerTemplate"></div>
-        <div ng-include = "mc.footerTemplate"></div>
+    
         
-        <a href="#"><div class="myclass second"></div></a>
-        <a href="https://www.w3schools.com/html/html5_intro.asp"><div class="myclass third"></div></a>
-        <a href="https://angularjs.org/"><div class="myclass fourth"></div></a>
-        <a href="https://www.oracle.com/java/index.html"><div class="myclass fifth"></div></a>
-        <a href="https://www.oracle.com/index.html"><div class="myclass sixth"></div></a>
-        <a href="https://www.android.com/"><div class="myclass seventh"></div></a>
-        
-        <div ng-include = "mc.commentTemplate"></div>
+        <div ui-view></div>
         
         
         
@@ -33,5 +27,9 @@
         <script src="app/comment/comment.js"></script>
         <script src="app/comment/commentCtrl.js"></script>
         <script src="app/comment/commentSvc.js"></script>
+        <script src="app/home/home.js"></script>
+        <script src="app/home/homeCtrl.js"></script>
+        <script src="app/contact/contact.js"></script>
+        <script src="app/contact/contactCtrl.js"></script>
     </body>
 </html>
