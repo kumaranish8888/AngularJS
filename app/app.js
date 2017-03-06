@@ -10,7 +10,8 @@
           // templateUrl:"app/login/login.tpl.html"
        };
        var postsObj = {
-           templateUrl:"app/posts/posts.tpl.html"
+           templateUrl:"app/posts/posts.tpl.html",
+           controller: "postsCtrl as pc"
        };
        var registerObj = {
            templateUrl:"app/register/register.tpl.html"
