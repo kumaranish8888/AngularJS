@@ -1,15 +1,15 @@
 (function(){
     
-    angular.module("footer").service("footerSvc", [footerSvc]);
+    angular.module("footer").service("footerSvc", ["$http", footerSvc]);
     
-    function footerSvc(){
+    function footerSvc($http){
         
         this.name = "Anish";
         
         this.getExtras = function(){
-      //      return  $http.get("api/extras.json");
+            return  $http.get("api/extras.json");
         
-        return  [
+      /*  return  [
         {
             "name": "C#",
             "code": "1"
@@ -38,7 +38,7 @@
             "name": "Sprint",
             "code": "1"
         }
-    ];
+    ]; */
         
         };
         

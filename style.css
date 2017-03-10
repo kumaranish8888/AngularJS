@@ -5,7 +5,7 @@ body {
 }
 
 .myclass {
-    
+    display: inline-block;
     height: 150px;
 	margin: 30px;
 	padding-bottom: 20px;
@@ -41,4 +41,8 @@ body {
 .seventh{
     background-image: url("android.jpeg");
     background-size: cover;
+}
+
+.contact{
+    text-align: center;
 }
