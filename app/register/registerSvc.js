@@ -9,6 +9,6 @@
             return $http.get("api/country.json");      
             
         };
-    };
+    }
     
 })();

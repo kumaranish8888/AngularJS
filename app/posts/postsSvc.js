@@ -6,6 +6,6 @@
         this.myPosts = function(){
             return $http.get("api/posts.json");
         };
-    };
+    }
     
 })();
