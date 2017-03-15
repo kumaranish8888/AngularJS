@@ -5,7 +5,7 @@
     function registerCtrl(registerSvc, $state){
         
         var rm = this;
-        rm.user = {};
+       // rm.user = {};
         
         rm.nextPage = function(){
             $state.go("posts", {userInfo:rm.user});

@@ -8,32 +8,57 @@
                    name="username"
                    ng-required="true"
                    ng-minlength="3"
-                   ng-maxlength="10">
-            <p ng-if="registerForm.username.$error.required">User name is required</p>
+                   ng-maxlength="10"
+                   ng-pattern="/^[A-z]+$/">
+            <p ng-if="registerForm.username.$error.required && registerForm.username.$dirty">User name is required</p>
             <p ng-if="registerForm.username.$error.minlength">User name should be minimum 3 characters</p>
             <p ng-if="registerForm.username.$error.maxlength">User name should be maximum 10 characters</p>
+            <p ng-if="registerForm.username.$error.pattern">User name should only contain alphabets</p>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="control-label col-sm-2">Email</label>
+        <div class="col-sm-4">
+            <input type="text" class="form-control" 
+                   ng-model="rc.user.email" 
+                   name="email"
+                   ng-required="true"
+                   ng-pattern="/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/">
+            <p ng-if="registerForm.email.$error.required && registerForm.email.$dirty">email is required</p>
+            <p ng-if="registerForm.email.$error.pattern">Invalid email</p>
         </div>
     </div>
     
     <div class="form-group">
         <label class="control-label col-sm-2">Password</label>
         <div class="col-sm-4">
-            <input type="text" class="form-control" 
+            <input type="password" class="form-control" 
                    ng-model="rc.user.password" 
                    name="password"
                    ng-required="true"
                    ng-minlength="6"
-                   ng-maxlength="12">
-            <p ng-if="registerForm.password.$error.required">Password is required</p>
-            <p ng-if="registerForm.password.$error.minlength">Password should be minimum 3 characters</p>
-            <p ng-if="registerForm.password.$error.maxlength">Password should be maximum 10 characters</p>
+                   ng-maxlength="12"
+                   ng-pattern="/^[A-z0-9$#@]+$/">
+            <p ng-if="registerForm.password.$error.required && registerForm.password.$dirty">Password is required</p>
+            <p ng-if="registerForm.password.$error.minlength">Password should be minimum 6 characters</p>
+            <p ng-if="registerForm.password.$error.maxlength">Password should be maximum 12 characters</p>
+            <p ng-if="registerForm.password.$error.pattern">Only special characters allowed are @#$</p>
         </div>
     </div>
     
     <div class="form-group">
         <label class="control-label col-sm-2">Age</label>
         <div class="col-sm-4">
-            <input type="text" class="form-control" ng-model="rc.user.age">
+            <input type="text" class="form-control" 
+                   name="age"
+                   ng-model="rc.user.age"
+                   ng-required="true"
+                   ng-minlength="2"
+                   ng-pattern="/^[0-9]+$/">
+            <p ng-if="registerForm.age.$error.required && registerForm.age.$dirty">Age is required</p>
+            <p ng-if="registerForm.age.$error.minlength">Under age</p>
+            <p ng-if="registerForm.age.$error.pattern">Invalid Entry</p>
         </div>
     </div>
     

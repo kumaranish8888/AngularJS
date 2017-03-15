@@ -19,12 +19,6 @@
            controller: "registerCtrl as rc"
        };
        
-     /*  var postMain = {
-           templateUrl: "app/posts/postMain.tpl.html",
-           controller: "postsCtrl as pc",
-           params: {userInfo:null}
-       };  */
-       
        $stateProvider.state("login", loginObj);
        $stateProvider.state("posts", postsObj);
        $stateProvider.state("register", registerObj);
@@ -36,9 +30,6 @@
         var vm =  this;
         
         vm.headerTemplate = "app/header/header.tpl.html";
-       // vm.commentTemplate = "app/comment/comment.tpl.html";
-      //  vm.registerTemplate = "app/register/register.tpl.html";
-       // vm.postsTemplate = "app/posts/posts.tpl.html";
     }
     
 })();
