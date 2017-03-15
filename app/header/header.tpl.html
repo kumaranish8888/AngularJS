@@ -12,8 +12,9 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav">
-        <li ng-repeat = "item in hc.navItem">
-            <a ui-sref="{{item.value}}">{{item.name}}</a>
+        <li ng-repeat = "item in hc.navItem" ng-click="hc.changeState(item.value)">
+           <!-- <a ui-sref="{{item.value}}">{{item.name}}</a> -->
+            <a href="#">{{item.name}}</a>
           </li>
         
       </ul>

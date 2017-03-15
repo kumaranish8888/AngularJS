@@ -1,9 +1,11 @@
 (function(){
     
-    angular.module("posts").controller("postsCtrl", ["postsSvc", postsCtrl]);
+    angular.module("posts").controller("postsCtrl", ["postsSvc", "$state", postsCtrl]);
     
-    function postsCtrl(postsSvc){
+    function postsCtrl(postsSvc, $state){
         var pm = this;
+        
+        console.log($state);
         
         postsSvc.myPosts()
             .then(function(response){

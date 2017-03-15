@@ -1,8 +1,8 @@
 (function(){
     
-    angular.module("header").controller("headerCtrl", [headerCtrl]);
+    angular.module("header").controller("headerCtrl", ["$state", headerCtrl]);
     
-    function headerCtrl(){
+    function headerCtrl($state){
         console.log("Controller working properly");
     
     var nm = this;
@@ -20,6 +20,11 @@
                 "value": "register"
             }
         ];
+        
+        nm.changeState = function(data){
+            console.log(data);
+            $state.go(data);
+        }
     
     }
     
