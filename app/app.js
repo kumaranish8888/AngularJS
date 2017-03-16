@@ -9,8 +9,9 @@
             templateUrl: "app/comment/comment.tpl.html"
         };
         
-        var registerObj = {
-            templateUrl: "app/footer/footer.tpl.html"
+        var footerObj = {
+            templateUrl: "app/footer/footer.tpl.html",
+            controller: "footerCtrl as rc"
         };
         
         var homeObj = {
@@ -21,7 +22,7 @@
             templateUrl: "app/contact/contact.tpl.html"
         };
         $stateProvider.state("comment", loginObj);
-        $stateProvider.state("footer", registerObj);
+        $stateProvider.state("footer", footerObj);
         $stateProvider.state("home", homeObj);
         $stateProvider.state("contact", contactObj);
         
@@ -35,10 +36,7 @@
         
         var vm = this;
         vm.headerTemplate = "app/header/header.tpl.html";
-      //  vm.homeTemplate = "app/home/home.tpl.html";
-    //    vm.footerTemplate = "app/footer/footer.tpl.html";
-    //    vm.commentTemplate = "app/comment/comment.tpl.html";
-        
+      
        
     } 
     

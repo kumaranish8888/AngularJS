@@ -2,7 +2,7 @@
     
     
     
-    function headerCtrl(){
+    function headerCtrl($state){
          var vm = this;
         
         vm.navItems = [
@@ -19,8 +19,14 @@
                 "value": "Register"
             },
         ];
+        
+        vm.travelState = function(data){
+            $state.go(data);
+        }
     }
     
-    angular.module("header").controller("headerCtrl", [headerCtrl]);
+    angular.module("header").controller("headerCtrl", ["$state", headerCtrl]);
     
-})()
+    
+    
+})();

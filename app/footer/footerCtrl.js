@@ -12,6 +12,7 @@
             .then(function(response){
             console.log(response);
             fm.extra = response.data.extras;
+            fm.user.selectedExtra = fm.extra[0];
         })
         
         .catch(function(response){
