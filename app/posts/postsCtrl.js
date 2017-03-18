@@ -1,16 +1,15 @@
 (function(){
     
-    angular.module("posts").controller("postsCtrl", ["postsSvc", "$state", postsCtrl]);
+    angular.module("posts").controller("postsCtrl", ["postsSvc", postsCtrl]);
     
-    function postsCtrl(postsSvc, $state){
+    function postsCtrl(postsSvc){
         var pm = this;
         
-        console.log($state);
         
         postsSvc.myPosts()
             .then(function(response){
             console.log(response);
-            pm.allPosts = response.data.posts;
+            pm.allPosts = response;
         })
         .catch(function(response){
             

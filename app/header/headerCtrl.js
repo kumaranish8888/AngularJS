@@ -18,6 +18,10 @@
             {
                 "name": "Register",
                 "value": "register"
+            },
+            {
+                "name": "Products",
+                "value": "products"
             }
         ];
         

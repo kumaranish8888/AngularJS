@@ -1,7 +1,7 @@
 (function(){
     
     
-    angular.module("bitblogger", ["header", "register", "comment", "posts", "ui.router", "login"]);
+    angular.module("bitblogger", ["header", "register", "comment", "posts", "ui.router", "login", "products"]);
     
    angular.module("bitblogger").config(["$stateProvider", function($stateProvider){
        console.log("Working");
@@ -18,10 +18,15 @@
            templateUrl:"app/register/register.tpl.html",
            controller: "registerCtrl as rc"
        };
+       var productsObj = {
+           templateUrl: "app/products/products.tpl.html",
+           controller: "productsCtrl as pc"
+       };
        
        $stateProvider.state("login", loginObj);
        $stateProvider.state("posts", postsObj);
        $stateProvider.state("register", registerObj);
+       $stateProvider.state("products", productsObj);
    }]);
     
     angular.module("bitblogger").controller("mainCtrl", [mainCtrl]);
