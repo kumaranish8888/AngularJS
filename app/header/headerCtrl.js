@@ -1,11 +1,13 @@
 (function(){
     
-    angular.module("header").controller("headerCtrl", ["$state", headerCtrl]);
+    angular.module("header").controller("headerCtrl", ["$state", "$rootScope", headerCtrl]);
     
-    function headerCtrl($state){
+    function headerCtrl($state, $rootScope){
         console.log("Controller working properly");
     
     var nm = this;
+        
+        nm.cartItems = 0;
         nm.navItem = [
             {
                 "name": "Posts",
@@ -29,6 +31,10 @@
             console.log(data);
             $state.go(data);
         }
+        
+        $rootScope.$on("ADD-ITEM-TO-CART", function(item){
+            nm.cartItems++;
+        }); 
     
     }
     
