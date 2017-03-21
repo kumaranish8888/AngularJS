@@ -55,10 +55,26 @@
                    ng-model="rc.user.age"
                    ng-required="true"
                    ng-minlength="2"
-                   ng-pattern="/^[0-9]+$/">
+                   ng-pattern="/^[0-9]+$/"
+                   only-numbers
+                   maxlength=2>
             <p ng-if="registerForm.age.$error.required && registerForm.age.$dirty">Age is required</p>
             <p ng-if="registerForm.age.$error.minlength">Under age</p>
             <p ng-if="registerForm.age.$error.pattern">Invalid Entry</p>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="control-label col-sm-2">Phone</label>
+        <div class="col-sm-4">
+            <input type="text" ng-model="rc.user.phone" class="form-control" only-numbers maxlength=10>
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <label class="control-label col-sm-2">DOB</label>
+        <div class="col-sm-4">
+            <input type="text" ng-model="rc.user.DOB" class="form-control" custom-date-picker>
         </div>
     </div>
     

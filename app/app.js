@@ -1,7 +1,7 @@
 (function(){
     
     
-    angular.module("bitblogger", ["header", "register", "comment", "posts", "ui.router", "login", "products"]);
+    angular.module("bitblogger", ["header", "register", "comment", "posts", "ui.router", "login", "products", "common"]);
     
    angular.module("bitblogger").config(["$stateProvider", function($stateProvider){
        console.log("Working");

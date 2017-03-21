@@ -8,6 +8,7 @@
     var nm = this;
         
         nm.cartItems = 0;
+        nm.brandName = "BitBlogger";
         nm.navItem = [
             {
                 "name": "Posts",

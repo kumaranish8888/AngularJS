@@ -2,15 +2,24 @@
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/darkly/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/css/bootstrap-datepicker.css">
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.6.4/js/bootstrap-datepicker.min.js"></script>
     </head>
     
     <body>
         <marquee ><a href="https://www.linkedin.com/in/anish-kumar-3a722a11b/">Click here for my LinkedIn Profile</a></marquee>
     <div ng-controller = "mainCtrl as mc">
         
-        <div ng-include = "mc.headerTemplate"></div>
+     <!--   <div ng-include = "mc.headerTemplate"></div> -->
+        <nav-bar></nav-bar>
+        
+        <div nav-bar></div>
+        
+        <div class="nav-bar"></div>
         
         <div ui-view></div>
         
@@ -43,5 +52,7 @@
         <script src="app/products/products.js"></script>
         <script src="app/products/productsCtrl.js"></script>
         <script src="app/products/productsSvc.js"></script>
+        
+        <script src="app/common/common.js"></script>
     </body>
 </html>
