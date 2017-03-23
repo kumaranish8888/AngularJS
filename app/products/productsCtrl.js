@@ -5,8 +5,10 @@
     function productsCtrl(productsSvc, $scope, $rootScope){
         
         var pm = this;
+        $scope.extra = 5;
         
-        pm.addProductToCart = function(data){
+        $scope.addProductToCart = function(data){
+            $scope.selectedProduct = data;
             $rootScope.$broadcast("ADD-ITEM-TO-CART");
         }
         
@@ -14,12 +16,16 @@
             
           // pm.myProducts = response; 
             
-            pm.myProducts = response;
+            $scope.myProducts = response;
         }).catch(function(response){
             
         }).finally(function(response){
             
         });
+        
+        $scope.showMore = function(){
+            $scope.extra += 5;
+        }
     }
     
 })();
