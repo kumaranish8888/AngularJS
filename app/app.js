@@ -1,10 +1,12 @@
 (function(){
     
     
-    angular.module("bitblogger", ["header", "register", "comment", "posts", "ui.router", "login", "products", "common"]);
+    angular.module("bitblogger", ["header", "register", "comment", "posts", "ui.router", "login", "products", "common", "home"]);
     
-   angular.module("bitblogger").config(["$stateProvider", function($stateProvider){
+   angular.module("bitblogger").config(["$stateProvider", "$urlRouterProvider", "$locationProvider",function($stateProvider, $urlRouterProvider, $locationProvider){
        console.log("Working");
+                                        
+       $urlRouterProvider.otherwise("/home");
        
        var loginObj = {
            templateUrl:"app/login/login.tpl.html"
@@ -22,11 +24,17 @@
            templateUrl: "app/products/products.tpl.html",
            controller: "productsCtrl as pc"
        };
+       var homeObj = {
+            templateUrl: "app/home/home.tpl.html",
+            controller: "homeCtrl as hm",
+            url:"/home"
+       }; 
        
        $stateProvider.state("login", loginObj);
        $stateProvider.state("posts", postsObj);
        $stateProvider.state("register", registerObj);
        $stateProvider.state("products", productsObj);
+       $stateProvider.state("home", homeObj);
    }]);
     
     angular.module("bitblogger").controller("mainCtrl", [mainCtrl]);

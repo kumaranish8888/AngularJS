@@ -13,7 +13,7 @@
     
     <body>
         <marquee ><a href="https://www.linkedin.com/in/anish-kumar-3a722a11b/">Click here for my LinkedIn Profile</a></marquee>
-    <div ng-controller = "mainCtrl as mc">
+    <div ng-controller = "mainCtrl as mc" class="container">
         
      <!--   <div ng-include = "mc.headerTemplate"></div> -->
         <nav-bar></nav-bar>
@@ -25,6 +25,17 @@
         <div ui-view></div>
         
       <!--  <div ng-include = "mc.commentTemplate"></div> -->
+        
+        <div class="row">
+            <div class="col-xs-5">
+                <div>
+                    Indian Office :{{"1234567890"|phoneFormat:"IN"}}
+                </div>
+                <div>
+                    US Office :{{"1234567890"|phoneFormat:"US"}}
+                </div>
+            </div>
+        </div>
         
         
         
@@ -55,5 +66,8 @@
         <script src="app/products/productsSvc.js"></script>
         
         <script src="app/common/common.js"></script>
+        <script src="app/common/commonFilters.js"></script>
+        
+        <script src="app/home/home.js"></script>
     </body>
 </html>

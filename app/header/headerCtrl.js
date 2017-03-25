@@ -3,7 +3,7 @@
     angular.module("header").controller("headerCtrl", ["$state", "$rootScope", headerCtrl]);
     
     function headerCtrl($state, $rootScope){
-        console.log("Controller working properly");
+        
     
     var nm = this;
         

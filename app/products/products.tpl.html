@@ -1,14 +1,24 @@
-<span details item="selectedProduct.Price"></span>
+<span details item="selectedProduct.Price"></span><hr/>
+<div class="row">
+    <div class="col-xs-4">
+        <input type="text" class="form-control" ng-model="searchByModel" placeholder="Search Model">
+    </div>
+    <div class="col-xs-4">
+        <input type="text" class="form-control" ng-model="searchByPrice" placeholder="Search Price">
+    </div>
+</div>
 <table class="table table-hover ">
   <thead>
     <tr>
-      <th><h3>Index</h3></th>
-      <th><h3>Price</h3></th>
-        <th><h3>Model</h3></th>
+        <th><h3><a href="#" ng-click="sortByIndex()">Index</a></h3></th>
+        <th><h3><a href="#" ng-click="sortByPrice()">Price</a></h3></th>
+        <th><h3><a href="#" ng-click="sortByModel()">Model</a></h3></th>
         <th><a href="" ng-click="showMore()">Show More</a></th>
     </tr>
   </thead>
-  <tbody ng-repeat="product in myProducts|limitTo:extra">
+ <!-- <tbody ng-repeat="product in myProducts|limitTo:extra"> -->
+  <!--  <tbody ng-repeat="product in myProducts|filter:search"> -->
+    <tbody ng-repeat="product in myProducts|orderBy:priceCriteria|filter:{Model:searchByModel}|filter:{Price:searchByPrice}|limitTo:extra">
     <tr>
       <td><h4>{{product.index}}</h4></td>
       <td><h4>{{product.Price|currency}}</h4></td>

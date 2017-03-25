@@ -5,7 +5,8 @@
     function registerCtrl(registerSvc, $state){
         
         var rm = this;
-       // rm.user = {};
+        rm.user = {};
+        rm.user.username = localStorage.getItem("name");
         
         rm.nextPage = function(){
             $state.go("posts", {userInfo:rm.user});
