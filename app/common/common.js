@@ -33,13 +33,8 @@
             link: function(scope, element, attrs){
                 var mylength  = attrs["maxlength"];
                 
-                console.log(scope);
-                console.log(element);
-                console.log(attrs);
-                
                 element.bind("keypress", function(e){
                     
-                    console.log(e);
                     var selectedKey = e.key;
                     var reg = new RegExp(/^[0-9]+$/);
                     if((reg.test(selectedKey) && this.value.length<=mylength)){

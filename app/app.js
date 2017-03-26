@@ -26,8 +26,8 @@
        };
        var homeObj = {
             templateUrl: "app/home/home.tpl.html",
-            controller: "homeCtrl as hm",
-            url:"/home"
+            controller: "homeCtrl as hm"
+          //  url:"/home"
        }; 
        
        $stateProvider.state("login", loginObj);
