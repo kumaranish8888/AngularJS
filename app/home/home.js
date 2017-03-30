@@ -4,8 +4,7 @@
     
     angular.module("home").controller("homeCtrl", [homeCtrl]);
     
-    function homeCtrl(){
-        console.log("home");
+    function homeCtrl (){
+        
     }
-    
 })();
