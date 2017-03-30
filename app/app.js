@@ -4,9 +4,7 @@
     angular.module("bitblogger", ["header", "register", "comment", "posts", "ui.router", "login", "products", "common", "home"]);
     
    angular.module("bitblogger").config(["$stateProvider", "$urlRouterProvider", "$locationProvider",function($stateProvider, $urlRouterProvider, $locationProvider){
-       console.log("Working");
                                         
-       $urlRouterProvider.otherwise("/home");
        
        var loginObj = {
            templateUrl:"app/login/login.tpl.html"
@@ -26,8 +24,8 @@
        };
        var homeObj = {
             templateUrl: "app/home/home.tpl.html",
-            controller: "homeCtrl as hm"
-          //  url:"/home"
+            controller: "homeCtrl as hm",
+            url:'/home'
        }; 
        
        $stateProvider.state("login", loginObj);
@@ -35,6 +33,8 @@
        $stateProvider.state("register", registerObj);
        $stateProvider.state("products", productsObj);
        $stateProvider.state("home", homeObj);
+       
+       $urlRouterProvider.otherwise('/home');
    }]);
     
     angular.module("bitblogger").controller("mainCtrl", [mainCtrl]);

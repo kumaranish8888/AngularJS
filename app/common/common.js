@@ -24,7 +24,7 @@
             restrict: "A"
         };
         
-    }
+    } 
     
     function onlyNumbers(){
         
