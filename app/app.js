@@ -6,22 +6,26 @@
         
         var registerObj = {
             templateUrl: "app/register/register.tpl.html",
-            controller: "registerCtrl as rc"
+            controller: "registerCtrl as rc",
+            url:'/register'
         };
         
         var productsObj = {
             templateUrl: "app/products/products.tpl.html",
-            controller:"productsCtrl as pc"
+            controller:"productsCtrl as pc",
+            url: '/products'
         };
         
         var postsObj = {
             templateUrl: "app/posts/posts.tpl.html",
-            controller :"postsCtrl as pc"
+            controller :"postsCtrl as pc",
+            url: '/posts'
         };
         
         var loginObj = {
             templateUrl: "app/login/login.tpl.html",
-            controller: "loginCtrl as ll"
+            controller: "loginCtrl as ll",
+            url: '/login'
         };
         
         var homeObj = {
@@ -35,7 +39,7 @@
         $stateProvider.state("login", loginObj);
         $stateProvider.state("home", homeObj);
         
-       //  $urlRouterProvider.otherwise('/');
+        $urlRouterProvider.otherwise('/');
         
     }]);
     
